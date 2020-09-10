@@ -1,3 +1,3 @@
-# Dylan's CTF Writeups
+# CTF Write Ups
 
-This repo contains all of my CTF writeups. If you see a typo, feel free to make a pull request. 
+All of my CTF write ups
