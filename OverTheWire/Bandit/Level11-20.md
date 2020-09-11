@@ -1,0 +1,45 @@
+# Bandit 11
+
+Access the next challenge using `ssh bandit11@bandit.labs.overthewire.org -p 2220` and password `IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR`
+
+Run the command `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
+
+The password is `5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu`
+
+# Bandit 12
+Access the next challenge using `ssh bandit12@bandit.labs.overthewire.org -p 2220` and password `5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu`
+
+Make a random folder in the /tmp folder. For example, `/tmp/randomtempfolder123`. You can do this with `mkdir /tmp/randomtempfolder123`. Then, copy the datafile to that temp folder using `cp` and `cd` to that folder.
+
+As the file is a hexdump, you need to reverse it using `xxd`. You should also put the output in a file. You can do this with `xxd -r data.txt >> data2`. 
+
+As the file has been compressed multiple times, you need to uncompress it. Use `file file2` to figure out the file type`.
+
+For gzip compressed files, use `gunzip [file]` on a .gz file. For bzip2 compressed files, use `bunzip2 [file]`. For a tar archive, use `tar -xf [file]`
+
+The password is `8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL`
+
+# Bandit 13
+Access the next challenge using `ssh bandit13@bandit.labs.overthewire.org -p 2220` and password `8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL`
+
+When you type `ls`, you should see a file named `sshkey.private`. Get the output of this file using `cat sshkey.private`. Once you do that logout of the challenge with `exit`. 
+
+Make a file named `sshkey` on your own computer. Paste the content that y ou copied earlier into this file. Once you do that, set the proper permissions using `chmod 600 sshkey` and then login to `ssh bandit14@bandit.labs.overthewire.org -p 2220 -i sshkey`
+
+Use `cat /etc/bandit_pass/bandit14` in order to see the password previously restricted in the last challenge. 
+
+The password is `4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e`
+
+# Bandit 14
+Access the next challenge using `ssh bandit14@bandit.labs.overthewire.org -p 2220` and password `4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e`
+
+As `ssh localhost -p 30000` does not work, `telnet localhost 30000` can be used instead. Once you are connected, enter `4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e`. 
+
+The password is `BfMYroe26WYalil77FoDi9qh59eK5xNr`
+
+# Bandit 15
+Access the next challenge using `ssh bandit15@bandit.labs.overthewire.org -p 2220` and password `BfMYroe26WYalil77FoDi9qh59eK5xNr`
+
+To access port 30001 on localhost using SSL, use `openssl s_client -crlf -connect localhost:30001`. Once you have connected, enter `BfMYroe26WYalil77FoDi9qh59eK5xNr`.
+
+The password is `cluFn7wTiGryunymYOu4RcffSxQluehd` 

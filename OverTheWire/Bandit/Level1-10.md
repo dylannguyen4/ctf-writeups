@@ -114,5 +114,3 @@ Access the next challenge using `ssh bandit10@bandit.labs.overthewire.org -p 222
 Use `base64 --decode data.txt` to decode the base64 encoded text file.
 
 The password is `IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR`
-
-
