@@ -1,5 +1,4 @@
 # Bandit 11
-
 Access the next challenge using `ssh bandit11@bandit.labs.overthewire.org -p 2220` and password `IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR`
 
 Run the command `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
@@ -43,3 +42,40 @@ Access the next challenge using `ssh bandit15@bandit.labs.overthewire.org -p 222
 To access port 30001 on localhost using SSL, use `openssl s_client -crlf -connect localhost:30001`. Once you have connected, enter `BfMYroe26WYalil77FoDi9qh59eK5xNr`.
 
 The password is `cluFn7wTiGryunymYOu4RcffSxQluehd` 
+
+# Bandit 16
+Access the next challenge using `ssh bandit16@bandit.labs.overthewire.org -p 2220` and password `cluFn7wTiGryunymYOu4RcffSxQluehd`.
+
+Find all open ports between ports 31000 to 32000 using `nmap localhost -p 31000-32000`. After running this command, you can see that ports 31046, 31518, 31691, 31790, and 31960 are open.
+
+To find which of these ports use SSL, run `nmap -sV localhost -p 31046,31518,31691,31790,31960`. This command may take a while. Once this command is complete, find the port that does not echo and connect to it. Use `openssl s_client -crlf -connect localhost:31790`. Once you have connected, submit the password of `cluFn7wTiGryunymYOu4RcffSxQluehd`
+
+Once you are done, the server will return a private SSH key. Make sure to copy this, add it to the file `sshkey` on your own computer, and run `chmod 600 sshkey` to ensure it has the proper permissions
+
+# Bandit 17
+Login to the next challenge using `ssh bandit17@bandit.labs.overthewire.org -p 2220 -i sshkey`. This assumes that your key obtained from the previous level is saved in the file `sshkey`.
+
+To find the line that has been changed between the files, run `diff passwords.old passwords.new`. 
+
+The password is `kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd`
+
+# Bandit 18
+Access the next challenge with `ssh bandit18@bandit.labs.overthewire.org -p 2220` and password `kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd`.
+
+As you are being logged out when you ssh in, you need to run the command when you login. To run commands through ssh, just append them to the end of your ssh command. The full command that needs to be used would be `ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme`
+
+The password is `IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x`
+
+# Bandit 19
+Access the next challenge with `ssh bandit19@bandit.labs.overthewire.org -p 2220` and password `IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x`.
+
+Running the file `bandit20-do` allows you to run a command as bandit20. With this file, we can use `./bandit20-do cat /etc/bandit_pass/bandit20` to get the password for the next level. 
+
+The password is `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`
+
+# Bandit 20
+Access the next challenge with `ssh bandit21@bandit.labs.overthewire.org -p 2220` and password `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`.
+
+In order to run two commands, you will need a one terminal trying to connect and one terminal running the server. To run the server you can use `screen echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j` | nc -vlp 12345". Once you do that, press Ctrl + A then D. Then, run `./suconnect 12345`.
+
+The password is `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`
