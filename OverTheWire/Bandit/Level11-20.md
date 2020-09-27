@@ -74,8 +74,8 @@ Running the file `bandit20-do` allows you to run a command as bandit20. With thi
 The password is `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`
 
 # Bandit 20
-Access the next challenge with `ssh bandit21@bandit.labs.overthewire.org -p 2220` and password `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`.
+Access the next challenge with `ssh bandit20@bandit.labs.overthewire.org -p 2220` and password `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`.
 
-In order to run two commands, you will need a one terminal trying to connect and one terminal running the server. To run the server you can use `screen echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j` | nc -vlp 12345". Once you do that, press Ctrl + A then D. Then, run `./suconnect 12345`.
+In order to run two commands, you will need a one terminal trying to connect and one terminal running the server. To run the server you can use `screen` then run `echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" | nc -vlp 12345`. Once you do that, press Ctrl + A then D. Then, run `./suconnect 12345`. After that occurs, run `screen -r` to see the password.
 
-The password is `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`
+The password is `gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr`
